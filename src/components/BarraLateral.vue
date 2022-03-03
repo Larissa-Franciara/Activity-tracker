@@ -3,9 +3,32 @@
   <h1>
     <img src="../assets/logo.svg" alt="">
   </h1>
-  <button class="button" @click="alterarTema">
-    {{textoBotao}}
+<!--  <div class="has-text-centered">-->
+  <button class="button  is-rounded"
+          style="background: rgb(0, 0, 1,0 )"
+          @click="alterarTema"
+  >
+    <img src="https://img.icons8.com/ios-glyphs/30/000000/moon-symbol.png"/>
+
   </button>
+<!--  </div>-->
+  <nav class="panel mt-5">
+    <ul>
+      <li>
+        <router-link to="/" class="link">
+          <i class="fas fa-tasks"></i>
+          Tarefas
+        </router-link>
+      </li>
+      <li>
+        <router-link to="/Projetos" class="link">
+          <i class="fas fa-project-diagram"></i>
+          Projetos
+        </router-link>
+      </li>
+    </ul>
+
+  </nav>
 </header>
 </template>
 
@@ -22,9 +45,9 @@ export default defineComponent({
   computed: {
     textoBotao () {
       if (this.modoEscuroAtivo) {
-        return 'Desativar modo dark'
+        return 'Off Dark'
       }
-      return 'Ativar modo dark'
+      return 'On Dark'
     }
   },
   methods: {
@@ -39,17 +62,32 @@ export default defineComponent({
 </script>
 
 <style scoped>
+h1 {
+  text-align: center;
+}
+strong {
+  color: #f95738
+}
 header {
   padding: 2rem;
   background: #0d3b66;
   width: 100%;
   height: 100vh;
-  text-align: center;
+
 }
 @media only screen and (max-width: 768px) {
   header {
     padding: 2.5rem;
     height: auto;
   }
+}
+.painel li {
+  margin: 8px 0;
+}
+.link {
+  color: #ffffff;
+}
+.link:hover {
+  color: #FAF0CA;
 }
 </style>

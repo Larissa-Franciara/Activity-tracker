@@ -1,6 +1,7 @@
 <template>
   <div
       class="is-flex is-align-items-center is-justify-content-space-between"
+      style="padding: 2rem;"
   >
     <Cronometro :tempoEmSegundos="tempoEmSegundos" />
     <button class="button" @click="iniciar" :disabled="cronometroRodando">
