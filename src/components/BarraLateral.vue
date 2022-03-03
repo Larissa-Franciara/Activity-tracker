@@ -70,7 +70,7 @@ strong {
 }
 header {
   padding: 2rem;
-  background: #0d3b66;
+  background: #025891;
   width: 100%;
   height: 100vh;
 
