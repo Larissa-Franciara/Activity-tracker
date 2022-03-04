@@ -6,6 +6,7 @@
     <Box v-if="listaEstaVazia">
       BORA TOMAR UM COFFEE É MELHORAR ESSA PRODUTIVIDADE ? <span style="font-size: 40px;">&#9749;</span>
     </Box>
+    <Tarefa v-for="(tarefa, index) in tarefas" :tarefa="tarefa" :key="index"/>
   </div>
 
 

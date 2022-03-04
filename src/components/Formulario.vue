@@ -78,10 +78,13 @@ export default defineComponent({
 
 </script>
 
-<style>
-.formulario {
-color: var(--texto-primario);
+<style scoped>
+.button {
+  margin-left: 8px;
+}
+.box {
   background-color: var(--bg-primario);
+  color: var(--texto-primario);
 }
 
 </style>

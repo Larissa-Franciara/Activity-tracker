@@ -46,7 +46,6 @@ export default defineComponent ({
   name: "Lista",
   methods: {
     excluir (id: string) {
-      // eslint-disable-next-line no-undef
   this.store.commit(EXCLUIR_PROJETO, id)
     }
   },

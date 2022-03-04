@@ -43,15 +43,12 @@ export default defineComponent({
     }
   },
   computed: {
-    textoBotao () {
-      if (this.modoEscuroAtivo) {
-        return 'Off Dark'
-      }
-      return 'On Dark'
+    textoBotao (): string {
+      return this.modoEscuroAtivo ? 'claro' : 'escuro'
     }
   },
   methods: {
-    alterarTema() {
+    alterarTema(): void {
       this.modoEscuroAtivo = !this.modoEscuroAtivo
       this.$emit('aoTemaAlterado', this.modoEscuroAtivo)
     }
